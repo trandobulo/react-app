@@ -15,7 +15,6 @@ class Game extends React.Component {
   
     handleClick(i) {
   
-      console.log(this.state.history);
       const myhistory = this.state.history.slice(0, this.state.stepNumber + 1);
       const current = myhistory[myhistory.length - 1];
       const squares = current.squares.slice();
@@ -46,7 +45,7 @@ class Game extends React.Component {
   
       const moves = history.map((step, move) => {
         const desc = move ?
-          'перейти к ходу №' + move : 'К началу Игры';
+          'Jump to move №' + move : 'Jump to start of the game';
         return (
           <li key={move}>
             <button onClick={() => this.jumpTo(move)}>{desc}</button>
