@@ -14,11 +14,10 @@ class Board extends React.Component {
     }
 
     renderRow(arr){
-      let i = 0;
-      arr = arr.map((item) => <div className="board-row" key={i++}>
+      
+      return arr.map((item,index) => <div className="board-row" key={index}>
                       {item.map((elem) => this.renderSquare(elem))}
                      </div>);
-      return arr
     }
 
     render() {
